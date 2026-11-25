@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#10120f" />
+  <title>GymSmart — Rendimiento inteligente</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="GymSmart inicio">
+        <span class="brand-mark"><i data-lucide="zap"></i></span>
+        <span>GYM<span>SMART</span></span>
+      </a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <button class="nav-item active" data-view="overview"><i data-lucide="layout-dashboard"></i><span>Resumen</span></button>
+        <button class="nav-item" data-view="routines"><i data-lucide="dumbbell"></i><span>Rutinas</span></button>
+        <button class="nav-item" data-view="attendance"><i data-lucide="calendar-check"></i><span>Asistencia</span></button>
+        <button class="nav-item" data-view="research"><i data-lucide="microscope"></i><span>Investigación</span></button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button class="nav-item"><i data-lucide="settings"></i><span>Configuración</span></button>
+        <div class="profile">
+          <div class="avatar">SV</div>
+          <div><strong>Santiago Vélez</strong><small>Plan Premium</small></div>
+          <i data-lucide="chevrons-up-down"></i>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="icon-button menu-button" id="menuButton" aria-label="Abrir menú"><i data-lucide="menu"></i></button>
+        <div>
+          <p class="eyebrow" id="dayLabel">LUNES, 24 NOV</p>
+          <h1 id="pageTitle">Buen día, Santiago <span>👋</span></h1>
+        </div>
+        <div class="top-actions">
+          <button class="icon-button notification" aria-label="Notificaciones"><i data-lucide="bell"></i><span></span></button>
+          <button class="primary-button" id="quickAction"><i data-lucide="plus"></i><span>Registrar asistencia</span></button>
+        </div>
+      </header>
+
+      <div class="content" id="content"></div>
+    </main>
+  </div>
+
+  <div class="toast" id="toast"><i data-lucide="circle-check"></i><span>Acción registrada</span></div>
+  <script src="app.js"></script>
+</body>
+</html>
